@@ -7,6 +7,7 @@ import FieldStatus from "./app/dashboard/FieldStatus";
 import DashboardHome from "./app/dashboard/DashboardHome";
 import AISchedule from "./app/dashboard/AISchedule";
 import Analytics from "./app/dashboard/Analytics";
+import About from "./app/about/About";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="schedule" element={<AISchedule />} />
           <Route path="analytics" element={<Analytics />} />
         </Route>
+        <Route path="/about" element={<About/> } />
       </Routes>
       <Footer />
     </Router>

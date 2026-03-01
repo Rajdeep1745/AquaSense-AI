@@ -6,7 +6,7 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg custom-navbar">
       <div className="container">
         <NavLink className="navbar-brand" to="/">
-          AquaSense
+          KrishiNeer
         </NavLink>
 
         <button
@@ -37,7 +37,7 @@ const Navbar = () => {
             </li>
             <li className="nav-item">
               <NavLink className="nav-link" to="/schedule">
-                Schedule
+                Alert
               </NavLink>
             </li>
             <li className="nav-item">
