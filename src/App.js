@@ -9,6 +9,7 @@ import AISchedule from "./app/dashboard/AISchedule";
 import Analytics from "./app/dashboard/Analytics";
 import About from "./app/about/About";
 import CropsOverview from "./app/crops overview/CropsOverview";
+import Alert from "./app/alert/Alert";
 
 
 function App() {
@@ -24,7 +25,8 @@ function App() {
           <Route path="analytics" element={<Analytics />} />
         </Route>
         <Route path="/overview" element={<CropsOverview /> } />
-        <Route path="/about" element={<About/> } />
+        <Route path="/schedule" element={<Alert />} />
+        <Route path="/about" element={<About />} />
       </Routes>
       <Footer />
     </Router>
