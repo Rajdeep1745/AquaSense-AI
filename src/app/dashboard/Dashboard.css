@@ -7,7 +7,7 @@
 /* SIDEBAR */
 .dashboard-sidebar {
   width: 240px;
-  background-color: #0f766e;
+  background-color: #14936f;
   padding: 30px 20px;
   display: flex;
   flex-direction: column;
@@ -32,7 +32,7 @@
 }
 
 .dashboard-sidebar a.active {
-  color: #10b981;
+  color: #01452e;
   font-weight: 600;
 }
 

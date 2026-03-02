@@ -1,70 +1,194 @@
-# Getting Started with Create React App
+# 🌊 AquaSense AI  
+### Intelligent Water Optimization System for Precision Irrigation
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> 🚜 Smart Farming | 💧 Water Conservation | 🤖 AI-Powered Automation  
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 📌 Problem Statement
 
-### `npm start`
+Agriculture consumes nearly **70% of global freshwater resources**, yet traditional irrigation methods:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- ❌ Overuse water  
+- ❌ Ignore real-time soil conditions  
+- ❌ Do not account for weather forecasts  
+- ❌ Require manual intervention  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+With increasing water scarcity and unpredictable climate conditions, irrigation must become intelligent and automated.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 💡 Our Solution
 
-### `npm run build`
+**AquaSense AI** is an IoT-based smart irrigation system that:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- 🌱 Monitors real-time soil moisture
+- 🌦 Integrates weather forecast APIs
+- 🤖 Uses AI to generate irrigation schedules
+- 💧 Minimizes water usage
+- ⚙ Automates pump control
+- 🚨 Provides live alerts and anomaly detection
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Our system ensures **maximum crop health with minimum water usage**.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🏗 System Architecture
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 🔹 1. Hardware Layer
+- Soil Moisture Sensors
+- ESP32 / Arduino
+- Water Pump + Relay Module
+- Water Level Sensor
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 🔹 2. Backend & Intelligence Layer
+- Sensor Data Processing
+- Weather API Integration
+- AI Irrigation Scheduler
+- Automated Pump Control Logic
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 🔹 3. Frontend (User Interface)
+- Dashboard (Real-time monitoring)
+- Alert System
+- Crop Overview
+- Irrigation Schedule Control
+- Manual Override Option
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 🔄 How It Works
+Soil Sensor Data
+↓
+Backend Server
+↓
+Weather Forecast Integration
+↓
+AI Scheduling Algorithm
+↓
+Optimized Irrigation Plan
+↓
+Pump Activation
+↓
+Real-Time Dashboard Update
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The system continuously runs in a monitoring loop to adapt irrigation dynamically.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 🖥 Features
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 📊 Real-Time Monitoring
+- Live soil moisture levels
+- Water tank status
+- Pump state
 
-### Analyzing the Bundle Size
+### 🤖 AI Irrigation Scheduler
+- Calculates optimal irrigation timing
+- Adjusts schedule based on:
+  - Soil moisture
+  - Weather forecast
+  - Crop type
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### 🚨 Smart Alerts
+- Low soil moisture
+- Overwatering detection
+- Rain forecast auto-pause
+- Manual resolve option
 
-### Making a Progressive Web App
+### 🌾 Crop-Specific Optimization
+Supports:
+- Rice
+- Wheat
+- Cotton
+- Sugarcane
+- Maize
+- Tomato
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Each crop has customized irrigation logic.
 
-### Advanced Configuration
+### ⚙ Manual Override
+- User can edit irrigation schedule
+- Override AI decision when needed
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## 🛠 Tech Stack
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Frontend
+- React.js
+- Bootstrap
+- CSS
 
-### `npm run build` fails to minify
+### Backend
+- Node.js
+- Express.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Database
+- PostgreSQL / MongoDB
+
+### IoT Hardware
+- ESP32 / Arduino
+- Soil Moisture Sensor
+- Relay Module
+- Water Pump
+
+### APIs
+- Weather Forecast API
+
+---
+
+## 📈 Impact
+
+| Metric | Expected Improvement |
+|--------|---------------------|
+| 💧 Water Usage | ↓ Up to 40% |
+| 🌾 Crop Yield | ↑ Up to 25% |
+| ⚡ Manual Effort | ↓ Significantly |
+| 📡 Monitoring | 24/7 Real-time |
+
+---
+
+## 👤 User Flow
+
+1. User logs into dashboard  
+2. Views real-time soil & weather data  
+3. Checks AI-generated irrigation schedule  
+4. Approves or edits schedule  
+5. Pump operates automatically  
+6. Receives alerts if anomaly detected  
+7. Continuous monitoring loop  
+
+---
+
+## 🚀 Installation & Setup
+
+### 1️⃣ Clone Repository
+
+```bash
+git clone https://github.com/your-username/aquasense-ai.git
+cd aquasense-ai
+```
+
+### 2️⃣ Install Frontend Dependencies
+
+```bash
+npm install
+npm start
+```
+
+### 3️⃣ Setup Backend
+
+```bash
+cd backend
+npm install
+npm run dev
+```
+
+### 4️⃣ Configure Environment Variables
+
+Create a `.env` file in the backend folder:
+
+```env
+WEATHER_API_KEY=your_api_key
+DATABASE_URL=your_database_url
+```
