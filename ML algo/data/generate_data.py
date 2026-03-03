@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+from pathlib import Path
 
 np.random.seed(42)
 N = 8000
@@ -105,6 +106,8 @@ zero_rows = pd.DataFrame({
 df = pd.concat([df, zero_rows], ignore_index=True)
 df = df.sample(frac=1, random_state=42).reset_index(drop=True)
 
-df.to_csv('data/training_data.csv', index=False)
+output_path = Path(__file__).resolve().parent / "training_data.csv"
+output_path.parent.mkdir(parents=True, exist_ok=True)
+df.to_csv(output_path, index=False)
 print(f"\nDataset saved: {len(df)} rows")
 print(df['water_required'].describe().round(1))

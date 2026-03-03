@@ -1,13 +1,18 @@
 import pandas as pd
 import joblib
 import numpy as np
+from pathlib import Path
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split, cross_val_score
 from sklearn.metrics import mean_absolute_error, r2_score, mean_squared_error
 
+BASE_DIR = Path(__file__).resolve().parents[1]
+DATA_PATH = BASE_DIR / "data" / "training_data.csv"
+MODEL_PATH = BASE_DIR / "model" / "irrigation_model.pkl"
+FEATURES_PATH = BASE_DIR / "model" / "features.pkl"
 
 # LOADING THE DATA
-df = pd.read_csv('data/training_data.csv')
+df = pd.read_csv(DATA_PATH)
 
 FEATURES = [
     'soil_moisture', 'temperature', 'humidity',
@@ -103,8 +108,9 @@ print(f"Agronomic estimate: ~168,000 litres\n")
 print(f"(If prediction is in this range, model learned correctly)\n")
 
 # SAVE
-joblib.dump(model, 'model/irrigation_model.pkl')
-joblib.dump(FEATURES, 'model/features.pkl')
+MODEL_PATH.parent.mkdir(parents=True, exist_ok=True)
+joblib.dump(model, MODEL_PATH)
+joblib.dump(FEATURES, FEATURES_PATH)
 print("\nModel saved successfully.")
 
 # import pandas as pd

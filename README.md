@@ -1,7 +1,8 @@
-# 🌊 AquaSense AI  
+# 🌊 AquaSense AI
+
 ### Intelligent Water Optimization System for Precision Irrigation
 
-> 🚜 Smart Farming | 💧 Water Conservation | 🤖 AI-Powered Automation  
+> 🚜 Smart Farming | 💧 Water Conservation | 🤖 AI-Powered Automation
 
 ---
 
@@ -9,10 +10,10 @@
 
 Agriculture consumes nearly **70% of global freshwater resources**, yet traditional irrigation methods:
 
-- ❌ Overuse water  
-- ❌ Ignore real-time soil conditions  
-- ❌ Do not account for weather forecasts  
-- ❌ Require manual intervention  
+- ❌ Overuse water
+- ❌ Ignore real-time soil conditions
+- ❌ Do not account for weather forecasts
+- ❌ Require manual intervention
 
 With increasing water scarcity and unpredictable climate conditions, irrigation must become intelligent and automated.
 
@@ -36,18 +37,21 @@ Our system ensures **maximum crop health with minimum water usage**.
 ## 🏗 System Architecture
 
 ### 🔹 1. Hardware Layer
+
 - Soil Moisture Sensors
 - ESP32 / Arduino
 - Water Pump + Relay Module
 - Water Level Sensor
 
 ### 🔹 2. Backend & Intelligence Layer
+
 - Sensor Data Processing
 - Weather API Integration
 - AI Irrigation Scheduler
 - Automated Pump Control Logic
 
 ### 🔹 3. Frontend (User Interface)
+
 - Dashboard (Real-time monitoring)
 - Alert System
 - Crop Overview
@@ -57,6 +61,7 @@ Our system ensures **maximum crop health with minimum water usage**.
 ---
 
 ## 🔄 How It Works
+
 Soil Sensor Data
 ↓
 Backend Server
@@ -78,11 +83,13 @@ The system continuously runs in a monitoring loop to adapt irrigation dynamicall
 ## 🖥 Features
 
 ### 📊 Real-Time Monitoring
+
 - Live soil moisture levels
 - Water tank status
 - Pump state
 
 ### 🤖 AI Irrigation Scheduler
+
 - Calculates optimal irrigation timing
 - Adjusts schedule based on:
   - Soil moisture
@@ -90,13 +97,16 @@ The system continuously runs in a monitoring loop to adapt irrigation dynamicall
   - Crop type
 
 ### 🚨 Smart Alerts
+
 - Low soil moisture
 - Overwatering detection
 - Rain forecast auto-pause
 - Manual resolve option
 
 ### 🌾 Crop-Specific Optimization
+
 Supports:
+
 - Rice
 - Wheat
 - Cotton
@@ -107,6 +117,7 @@ Supports:
 Each crop has customized irrigation logic.
 
 ### ⚙ Manual Override
+
 - User can edit irrigation schedule
 - Override AI decision when needed
 
@@ -115,80 +126,110 @@ Each crop has customized irrigation logic.
 ## 🛠 Tech Stack
 
 ### Frontend
+
 - React.js
 - Bootstrap
 - CSS
 
 ### Backend
+
 - Node.js
 - Express.js
 
 ### Database
+
 - PostgreSQL / MongoDB
 
 ### IoT Hardware
+
 - ESP32 / Arduino
 - Soil Moisture Sensor
 - Relay Module
 - Water Pump
 
 ### APIs
+
 - Weather Forecast API
 
 ---
 
 ## 📈 Impact
 
-| Metric | Expected Improvement |
-|--------|---------------------|
-| 💧 Water Usage | ↓ Up to 40% |
-| 🌾 Crop Yield | ↑ Up to 25% |
-| ⚡ Manual Effort | ↓ Significantly |
-| 📡 Monitoring | 24/7 Real-time |
+| Metric           | Expected Improvement |
+| ---------------- | -------------------- |
+| 💧 Water Usage   | ↓ Up to 40%          |
+| 🌾 Crop Yield    | ↑ Up to 25%          |
+| ⚡ Manual Effort | ↓ Significantly      |
+| 📡 Monitoring    | 24/7 Real-time       |
 
 ---
 
 ## 👤 User Flow
 
-1. User logs into dashboard  
-2. Views real-time soil & weather data  
-3. Checks AI-generated irrigation schedule  
-4. Approves or edits schedule  
-5. Pump operates automatically  
-6. Receives alerts if anomaly detected  
-7. Continuous monitoring loop  
+1. User logs into dashboard
+2. Views real-time soil & weather data
+3. Checks AI-generated irrigation schedule
+4. Approves or edits schedule
+5. Pump operates automatically
+6. Receives alerts if anomaly detected
+7. Continuous monitoring loop
 
 ---
 
-## 🚀 Installation & Setup
+## Installation & Setup
 
-### 1️⃣ Clone Repository
+Run the following commands from the project root in this exact order.
 
-```bash
-git clone https://github.com/your-username/aquasense-ai.git
-cd aquasense-ai
-```
-
-### 2️⃣ Install Frontend Dependencies
+### 1. Install frontend dependencies
 
 ```bash
 npm install
+```
+
+### 2. Install Python requirements
+
+```bash
+python -m pip install -r "ML algo/requirements.txt"
+```
+
+If `python` is not recognized, use:
+
+```bash
+py -m pip install -r "ML algo/requirements.txt"
+```
+
+### 3. Generate training data
+
+```bash
+python "ML algo/data/generate_data.py"
+```
+
+### 4. Train the model
+
+```bash
+python "ML algo/model/train_model.py"
+```
+
+### 5. Start the ML API backend
+
+```bash
+python "ML algo/api/main.py"
+```
+
+Keep this terminal running. The dashboard expects the ML API to be reachable (default: port `5000`).
+
+### 6. Start the site
+
+Open a new terminal in the project root and run:
+
+```bash
 npm start
 ```
 
-### 3️⃣ Setup Backend
+## Quick Health Check
 
-```bash
-cd backend
-npm install
-npm run dev
-```
+After starting the API, open:
 
-### 4️⃣ Configure Environment Variables
+- `http://127.0.0.1:5000/health`
 
-Create a `.env` file in the backend folder:
-
-```env
-WEATHER_API_KEY=your_api_key
-DATABASE_URL=your_database_url
-```
+If this returns JSON, backend is running correctly.

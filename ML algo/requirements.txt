@@ -1,0 +1,8 @@
+flask
+joblib
+numpy
+openmeteo-requests
+pandas
+requests-cache
+retry-requests
+scikit-learn
