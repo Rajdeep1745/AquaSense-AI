@@ -67,7 +67,7 @@ export default function CropsOverview() {
       strategy: "Irrigation during flowering and pod formation stage.",
     },
     {
-      name: "Soybean",
+      name: "Soyabean",
       icon: "🌱",
       water: "Moderate",
       soil: "Well-drained loamy soil",
